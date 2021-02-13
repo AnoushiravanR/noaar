@@ -19,11 +19,12 @@
 #' @importFrom magrittr %>%
 #'
 #' @examples
-#' NOAA_data %>%
+#' NOAA_data <- NOAA_data %>%
 #'  eq_clean_data() %>%
 #'  eq_location_clean() %>%
-#'  dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000) %>%
-#'  eq_map(annot_col = "Date")
+#'  dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000)
+
+#'  eq_map(NOAA_data, annot_col = "Date")
 #'
 #' @export
 eq_map <- function(data, annot_col) {
@@ -60,12 +61,13 @@ eq_map <- function(data, annot_col) {
 #' @importFrom magrittr %>%
 #'
 #' @examples
-#' NOAA_data %>%
+#' NOAA_data <- NOAA_data %>%
 #'  eq_clean_data() %>%
 #'  eq_location_clean() %>%
 #'  dplyr::filter(Country %in% c("HONDURAS", "MEXICO") & lubridate::year(Date) >= 2000) %>%
-#'  dplyr::mutate(popup_text = eq_create_label(.)) %>%
-#'  eq_map(annot_col = "popup_text")
+#'  dplyr::mutate(popup_text = eq_create_label(.))
+#'
+#'  eq_map(NOAA_data, annot_col = "popup_text")
 #'
 #' @export
 eq_create_label <- function(data) {

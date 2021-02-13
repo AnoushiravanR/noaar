@@ -8,7 +8,8 @@ Description: This package was built to manipulate and map NOAA
     Significant Earthquakes dataset 
 URL: https://github.com/AnoushiravanR/noaar
 BugReports: https://github.com/AnoushiravanR/noaar/issues
-Depends: R (>= 3.0.0)
+Depends: 
+    R (>= 3.0.0)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -22,7 +23,8 @@ Imports:
     purrr,
     rlang,
     readr,
-    magrittr
+    magrittr,
+    tibble
 Suggests: 
     knitr,
     rmarkdown,
