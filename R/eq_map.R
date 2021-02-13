@@ -22,7 +22,7 @@
 #' NOAA_data %>%
 #'  eq_clean_data() %>%
 #'  eq_location_clean() %>%
-#'  dplyr::filter(Country == "MEXICO" & year(Date) >= 2000) %>%
+#'  dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000) %>%
 #'  eq_map(annot_col = "Date")
 #'
 #' @export
@@ -63,7 +63,7 @@ eq_map <- function(data, annot_col) {
 #' NOAA_data %>%
 #'  eq_clean_data() %>%
 #'  eq_location_clean() %>%
-#'  dplyr::filter(Country %in% c("HONDURAS", "MEXICO") & year(Date) >= 2000) %>%
+#'  dplyr::filter(Country %in% c("HONDURAS", "MEXICO") & lubridate::year(Date) >= 2000) %>%
 #'  dplyr::mutate(popup_text = eq_create_label(.)) %>%
 #'  eq_map(annot_col = "popup_text")
 #'
