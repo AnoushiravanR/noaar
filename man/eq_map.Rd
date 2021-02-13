@@ -13,10 +13,10 @@ eq_map(data, annot_col)
 has to be a character strings of length one.}
 }
 \value{
-Returns a \code{leaflet} map.
+Returns a leaflet map.
 }
 \description{
-\code{eq_map} creates a \code{\link[leaflet]{leaflet}} map
+\code{eq_map} creates a leaflet map
 showing the location of each earthquakes on the map.
 }
 \details{

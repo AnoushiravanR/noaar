@@ -1,7 +1,7 @@
 #' Leaflet Map Tools
 #'
 #' @description
-#' \code{eq_map} creates a \code{\link[leaflet]{leaflet}} map
+#' \code{eq_map} creates a leaflet map
 #' showing the location of each earthquakes on the map.
 #'
 #' @details
@@ -14,7 +14,7 @@
 #' @param annot_col The name of the column to be used for annotation and it
 #'  has to be a character strings of length one.
 #'
-#' @return Returns a \code{leaflet} map.
+#' @return Returns a leaflet map.
 #'
 #' @importFrom magrittr %>%
 #'
