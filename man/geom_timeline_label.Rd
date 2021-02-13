@@ -41,21 +41,21 @@ combining with them.}
 }
 \description{
 \code{geom_timeline_label} can be used together with
-\code{\link{geom_timeline}}, labeling the top \code{n} earthquakes, by
+\code{\link{geom_timeline}}, labeling the top n earthquakes, by
 magnitude, with a specified label field.  By default, the labels are for
 the top 5 earthquakes for each country specified, however, the user may
 adjust this with the \code{n_max} aesthetic.
 }
 \examples{
-eq <- eq_clean_data(NOAA_data)
-eq2 <- eq_location_clean(eq)
-eq2 \%>\%
+NOAA_data <- NOAA_data \%>\%
+eq_clean_data() \%>\%
+eq_location_clean() \%>\%
 dplyr::filter(Country \%in\% c("MEXICO", "IRAN") &
                Date \%within\% lubridate::interval(ymd(20000103), ymd(20180104))) \%>\%
 dplyr::mutate(Country = factor(Country, levels = unique(Country))) \%>\%
 ggplot2::ggplot() +
-geom_timeline(aes(x = Date, y = Country, size = Mag, colour = Deaths)) +
-geom_timeline_label(aes(x = Date, y = Country, label = Location,
+geom_timeline(ggplot2::aes(x = Date, y = Country, size = Mag, colour = Deaths)) +
+geom_timeline_label(ggplot2::aes(x = Date, y = Country, label = Location,
                          magnitude = Mag, colour = Deaths, n_max = 7), alpha = 0.5) +
 ggplot2::scale_colour_continuous(name = "# deaths") +
 ggplot2::theme(legend.position = "bottom") +

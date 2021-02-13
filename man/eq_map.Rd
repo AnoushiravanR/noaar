@@ -27,9 +27,10 @@ for popup.
 }
 \examples{
 NOAA_data <- NOAA_data \%>\%
- eq_clean_data() \%>\%
- eq_location_clean() \%>\%
- dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000)
- eq_map(NOAA_data, annot_col = "Date")
+eq_clean_data() \%>\%
+eq_location_clean() \%>\%
+dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000)
+
+eq_map(data = NOAA_data, annot_col = "Date")
 
 }

@@ -6,6 +6,9 @@
 \usage{
 eq_location_clean(data)
 }
+\arguments{
+\item{data}{a data frame of NOAA earthquake.}
+}
 \value{
 a \code{tibble} with one additional column which is the result of the
  previous \code{Location Name} being divided into two columns \code{Country}

@@ -28,11 +28,11 @@ used as a more informative label. The label contains the following items:
 }
 \examples{
 NOAA_data <- NOAA_data \%>\%
- eq_clean_data() \%>\%
- eq_location_clean() \%>\%
+eq_clean_data() \%>\%
+eq_location_clean() \%>\%
  dplyr::filter(Country \%in\% c("HONDURAS", "MEXICO") & lubridate::year(Date) >= 2000) \%>\%
  dplyr::mutate(popup_text = eq_create_label(.))
 
- eq_map(NOAA_data, annot_col = "popup_text")
+ eq_map(data = NOAA_data, annot_col = "popup_text")
 
 }

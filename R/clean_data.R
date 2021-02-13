@@ -12,10 +12,10 @@
 #'
 #' @param data a data frame of NOAA earthquake.
 #'
-#' @importFrom magrittr %>%
-#'
 #' @return A \code{tibble} with a new column \code{Date} but removing
 #' \code{Year}, \code{Mo} & \code{Dy} variables of the input data frame.
+#'
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' data(NOAA_data)
@@ -43,6 +43,8 @@ eq_clean_data <- function(data) {
 #' \code{eq_location_clean} function manipulates the \code{Location Name} by
 #'  separating country name and location name into \code{Country} and
 #'  \code{Location} columns. It then turns \code{Location} into Title Case.
+#'
+#' @param data a data frame of NOAA earthquake.
 #'
 #' @importFrom magrittr %>%
 #'
