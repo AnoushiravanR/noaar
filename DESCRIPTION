@@ -21,7 +21,8 @@ Imports:
     leaflet,
     purrr,
     rlang,
-    readr
+    readr,
+    magrittr
 Suggests: 
     knitr,
     rmarkdown,
