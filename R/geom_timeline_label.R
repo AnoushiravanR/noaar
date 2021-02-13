@@ -25,6 +25,7 @@
 #' @importFrom magrittr %>%
 #'
 #' @examples
+#' \dontrun{
 #' NOAA_data <- NOAA_data %>%
 #' eq_clean_data() %>%
 #' eq_location_clean() %>%
@@ -38,6 +39,8 @@
 #' ggplot2::scale_colour_continuous(name = "# deaths") +
 #' ggplot2::theme(legend.position = "bottom") +
 #' ggplot2::ylab("")
+#' }
+#'
 #' @export
 geom_timeline_label <- function(mapping = NULL, data = NULL, stat = "identity",
                                 position = "identity", show.legend = NA,

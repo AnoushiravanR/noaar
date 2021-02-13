@@ -22,7 +22,8 @@
 #' @examples
 #' \dontrun{
 #' ggplot(data = eq, aes(x = Date, y = Country,
-#' color = Deaths, size = Mag)) + geom_timeline(alpha = 0.2)}
+#' color = Deaths, size = Mag)) + geom_timeline(alpha = 0.2)
+#' }
 #' @export
 geom_timeline <- function(mapping = NULL, data = NULL, stat = "identity",
                           position = "identity", show.legend = NA,

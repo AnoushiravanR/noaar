@@ -46,5 +46,6 @@ data range and plots each earthquake as a point on that timline
 \examples{
 \dontrun{
 ggplot(data = eq, aes(x = Date, y = Country,
-color = Deaths, size = Mag)) + geom_timeline(alpha = 0.2)}
+color = Deaths, size = Mag)) + geom_timeline(alpha = 0.2)
+}
 }

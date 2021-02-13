@@ -47,6 +47,7 @@ the top 5 earthquakes for each country specified, however, the user may
 adjust this with the \code{n_max} aesthetic.
 }
 \examples{
+\dontrun{
 NOAA_data <- NOAA_data \%>\%
 eq_clean_data() \%>\%
 eq_location_clean() \%>\%
@@ -60,4 +61,6 @@ geom_timeline_label(ggplot2::aes(x = Date, y = Country, label = Location,
 ggplot2::scale_colour_continuous(name = "# deaths") +
 ggplot2::theme(legend.position = "bottom") +
 ggplot2::ylab("")
+}
+
 }
