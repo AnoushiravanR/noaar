@@ -40,11 +40,8 @@ combining with them.}
 \item{...}{Other arguments passed on to \code{link[ggplot2]{layer}}.}
 }
 \description{
-\code{geom_timeline_label} can be used together with
-\code{\link{geom_timeline}}, labeling the top n earthquakes, by
-magnitude, with a specified label field.  By default, the labels are for
-the top 5 earthquakes for each country specified, however, the user may
-adjust this with the \code{n_max} aesthetic.
+\code{geom_timeline_label} enables you to label the n biggest earthquakes
+based on the Richter scales by means of \code{n_max} arguments.
 }
 \examples{
 \dontrun{
