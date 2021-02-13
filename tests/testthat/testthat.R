@@ -2,7 +2,6 @@ library(testthat)
 library(noaar)
 library(magrittr)
 
-test_check("noaar")
 
 NOAA_data <- NOAA_data %>%
   eq_clean_data() %>%
