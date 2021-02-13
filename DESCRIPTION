@@ -25,9 +25,9 @@ Imports:
     readr,
     magrittr,
     tibble,
-    ggplot2
+    ggplot2,
+    knitr
 Suggests: 
-    knitr,
     rmarkdown,
     testthat (>= 3.0.0)
 RoxygenNote: 7.1.1
