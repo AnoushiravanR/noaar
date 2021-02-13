@@ -29,7 +29,7 @@ for popup.
 NOAA_data \%>\%
  eq_clean_data() \%>\%
  eq_location_clean() \%>\%
- dplyr::filter(Country == "MEXICO" & year(Date) >= 2000) \%>\%
+ dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000) \%>\%
  eq_map(annot_col = "Date")
 
 }

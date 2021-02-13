@@ -14,9 +14,9 @@
 #' @param annot_col The name of the column to be used for annotation and it
 #'  has to be a character strings of length one.
 #'
-#' @importFrom magrittr %>%
-#'
 #' @return Returns a \code{leaflet} map.
+#'
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' NOAA_data %>%
@@ -54,10 +54,10 @@ eq_map <- function(data, annot_col) {
 #'
 #' @param data The \code{\link{NOAA_data}} data frame.
 #'
-#' @importFrom magrittr %>%
-#'
 #' @return A character vector using HTML tags to be used as label for
 #'  \code{annot_col} variable.
+#'
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' NOAA_data %>%
@@ -77,5 +77,4 @@ eq_create_label <- function(data) {
                                paste("<b>No Data Available</b>"), popup_text))
   labelled_data$popup_text
 }
-
 

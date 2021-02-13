@@ -30,7 +30,7 @@ used as a more informative label. The label contains the following items:
 NOAA_data \%>\%
  eq_clean_data() \%>\%
  eq_location_clean() \%>\%
- dplyr::filter(Country \%in\% c("HONDURAS", "MEXICO") & year(Date) >= 2000) \%>\%
+ dplyr::filter(Country \%in\% c("HONDURAS", "MEXICO") & lubridate::year(Date) >= 2000) \%>\%
  dplyr::mutate(popup_text = eq_create_label(.)) \%>\%
  eq_map(annot_col = "popup_text")
 
