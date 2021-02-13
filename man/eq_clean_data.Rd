@@ -24,6 +24,6 @@ This function takes NOAA earthquake data and creates a \code{Date} column
 }
 \examples{
 data(NOAA_data)
-eq <- eq_clean_data(NOAA_data)
+eq_clean_data(NOAA_data)
 
 }

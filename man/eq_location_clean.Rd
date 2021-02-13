@@ -25,6 +25,6 @@ manipulation on \code{Locaiton Name}.
 }
 \examples{
 data(NOAA_data)
-eq2 <- eq_location_clean("NOAA_data")
+eq_location_clean(NOAA_data)
 
 }
