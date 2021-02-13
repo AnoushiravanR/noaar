@@ -22,6 +22,8 @@
 #' @param stat Override the default connection between \code{geom_timeline_label}
 #' and stat_timeline_label(however I have not written a stat for this geom).
 #'
+#' @importFrom magrittr %>%
+#'
 #' @examples
 #' eq <- eq_clean_data(NOAA_data)
 #' eq2 <- eq_location_clean(eq)
