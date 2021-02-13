@@ -20,7 +20,8 @@ Imports:
     grid,
     leaflet,
     purrr,
-    rlang
+    rlang,
+    readr
 Suggests: 
     knitr,
     rmarkdown,
