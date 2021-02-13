@@ -8,18 +8,7 @@
 #'  approximately 4,000 year time span.
 #'
 #' @format
-#' A data frame of 6219 observations and 39 variables. The followings are
-#'  the ones that are required for our data analysis.
-#' \describe{
-#'  \item{Year}
-#'  \item{Mo}{Month}
-#'  \item{Dy}{Day}
-#'  \item{`Location Name`}{The name of the country and city where earthquake occurred}
-#'  \item{Longitude}
-#'  \item{Latitude}
-#'  \item{Mag}{The Magnitude of earthquake on the Richter scale}
-#'  \item{Deaths}{Number of casualties(Deaths)}
-#' }
+#' A data frame of 6219 observations and 39 variables.
 #'
 #' @source
 #'  NOAA National Centers for Environmental Information
