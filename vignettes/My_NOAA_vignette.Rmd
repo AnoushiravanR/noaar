@@ -1,0 +1,164 @@
+---
+title: "My_NOAA_vignette"
+author: "Anoushiravan Razmavar"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{My_NOAA_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The `noaar` package has been built for cleaning and mapping NOAA's Significant Earthquake data. 
+
+## Installation
+
+In order to install the `noaar` package, the user must first install the
+`devtools` package and then use the following commands:
+
+```{r eval=FALSE}
+devtools::install_github("AnoushiravanR/noaar")
+library(noaar)
+```
+
+## Required packages
+
+For codes in `noaar` package to work the following packages are required:
+
+```{r setup, warning=FALSE, message=FALSE}
+library(noaar)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(stringr)
+library(lubridate)
+library(purrr)
+library(rlang)
+library(grid)
+library(leaflet)
+library(tibble)
+```
+
+## Load and clean package data
+
+For loading the `NOAA_data` you can use `noaar::NOAA_data`, then you can 
+call `eq_clean_data` and `eq_location_clean` to do some modifications on a 
+number of variables. After that the data can be used for geom functions.
+
+```{r}
+NOAA_data <- noaar::NOAA_data
+NOAA_data <- NOAA_data %>%
+  eq_clean_data() %>%
+  eq_location_clean()
+NOAA_data %>%
+  dplyr::select(1:10)
+```
+
+
+
+A brief description of the variables that are used for data analysis are presented
+in the table bellow:
+
+
+
+```{r results='asis', echo=FALSE}
+
+knitr::kable(tibble::tribble(~ Variable, ~ Class, ~ Description,
+                             "Date", "Date", "The date in which the earthquake occurred",
+                             "Country", "Character", "The Country in which the earthquake occurred",
+                             "Location", "Character", "The place(normally city) in which the earthquake occurred",
+                             "Longitude", "Numeric", "The longitude of the location",
+                             "Latitude", "Numeric", "The latitude of the location", 
+                             "Mag", "Numeric", "The magnitude of earthquake based on the Richter scale",
+                             "Deaths", "Numeric", "The number of casualties(deaths)"), 
+             caption = "The Principal Variables Required for Visualization")
+
+
+```
+
+
+## Geoms
+
+### geom_timeline
+
+You can  use the following code to make a time line geom of a single or multiple 
+countries within a specific time intervals:
+
+```{r fig.width=7, fig.align='center'}
+NOAA_data %>%
+  dplyr::filter(Country %in% c("MEXICO", "IRAN") &
+           Date %within% lubridate::interval(ymd(20000103), ymd(20180104))) %>%
+  dplyr::mutate(Country = factor(Country, levels = unique(Country))) %>%
+  ggplot2::ggplot() +
+  geom_timeline(aes(x = Date, y = Country, size = Mag, colour = Deaths)) +
+  ggplot2::scale_colour_continuous(name = "# deaths") +
+  ggplot2::scale_size_continuous(name = "Richter scale value") +
+  ggplot2::theme(legend.position = "bottom") +
+  ggplot2::ylab("")
+
+```
+
+### geom_timeline_label
+
+This geom function also enables you to map a time line of a single or multiple 
+countries within a specific time interval, additionally, it has a new aesthetic 
+`n_max` which you can adjust for labeling the n biggest earthquakes.
+
+
+```{r fig.width=7, fig.align='center'}
+NOAA_data %>%
+  dplyr::filter(Country %in% c("MEXICO", "IRAN") &
+           Date %within% lubridate::interval(ymd(20000103), ymd(20180104))) %>%
+  dplyr::mutate(Country = factor(Country, levels = unique(Country))) %>%
+  ggplot2::ggplot() +
+  geom_timeline(aes(x = Date, y = Country, size = Mag, colour = Deaths)) +
+  geom_timeline_label(aes(x = Date, y = Country, label = Location,
+                          magnitude = Mag, colour = Deaths, n_max = 5), alpha = 0.5) +
+  ggplot2::scale_colour_continuous(name = "# deaths") +
+  ggplot2::theme(legend.position = "bottom") +
+  ggplot2::ylab("")
+
+```
+
+Note that you can combine these two geoms or use them seperately.
+
+## Plot Map
+
+### Using a column for annotation
+
+You can create an interactive leaflet map with `eq_map` function. You can also
+annotate the locations by using `annot_col` argument and adjusting a column to 
+it. It should be noted that `annot_col` requires a character vector. 
+
+```{r fig.width=7, fig.align='center'}
+NOAA_data %>%
+  dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000) %>%
+  eq_map(annot_col = "Date")
+
+```
+
+### Using a more interesting and informative annotation 
+
+For more customized and informative labels you can create a new variable in 
+the data set using some HTML-formatting to create character string for the 
+`annot_col` parameter. 
+
+```{r fig.width=7, fig.align='center'}
+NOAA_data %>%
+  dplyr::filter(Country %in% c("HONDURAS", "MEXICO") & year(Date) >= 2000) %>%
+  dplyr::mutate(popup_text = eq_create_label(.)) %>%
+  eq_map(annot_col = "popup_text")
+
+```
+
+
+
+
+

@@ -1,0 +1,28 @@
+Package: noaar
+Type: Package
+Title: NOAA Significant Earthquakes Dataset Mapping
+Version: 0.1.0
+Authors@R: person('Anoushiravan', 'Razmavar', email = 'anooshrz@gmail.com', 
+                 role = c('aut', 'cre'))
+Description: This package was built to manipulate and map NOAA 
+    Significant Earthquakes dataset 
+Depends: R (>= 3.0.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr (>= 1.0.3),
+    tidyr,
+    stringr,
+    lubridate,
+    grid,
+    leaflet,
+    purrr,
+    rlang
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr
+Config/testthat/edition: 3
