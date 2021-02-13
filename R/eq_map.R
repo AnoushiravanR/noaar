@@ -19,7 +19,9 @@
 #' @importFrom magrittr %>%
 #'
 #' @examples
-#' NOAA_data <- NOAA_data %>%
+#' readr::read_delim("inst/extdata/earthquakes.tsv.txt",
+#' delim = "\t", col_names = TRUE, col_types = readr::cols(),
+#' na = c("", "NA")) %>%
 #'  eq_clean_data() %>%
 #'  eq_location_clean() %>%
 #'  dplyr::filter(Country == "MEXICO" & lubridate::year(Date) >= 2000)
@@ -61,7 +63,9 @@ eq_map <- function(data, annot_col) {
 #' @importFrom magrittr %>%
 #'
 #' @examples
-#' NOAA_data <- NOAA_data %>%
+#' readr::read_delim("inst/extdata/earthquakes.tsv.txt",
+#' delim = "\t", col_names = TRUE, col_types = readr::cols(),
+#' na = c("", "NA")) %>%
 #'  eq_clean_data() %>%
 #'  eq_location_clean() %>%
 #'  dplyr::filter(Country %in% c("HONDURAS", "MEXICO") & lubridate::year(Date) >= 2000) %>%
