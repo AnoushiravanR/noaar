@@ -19,7 +19,7 @@
 #'
 #' @examples
 #' data(NOAA_data)
-#' eq <- eq_clean_data(NOAA_data)
+#' eq_clean_data(NOAA_data)
 #'
 #' @export
 eq_clean_data <- function(data) {
@@ -55,7 +55,7 @@ eq_clean_data <- function(data) {
 #'
 #' @examples
 #' data(NOAA_data)
-#' eq2 <- eq_location_clean("NOAA_data")
+#' eq_location_clean(NOAA_data)
 #'
 #' @export
 eq_location_clean <- function(data) {
