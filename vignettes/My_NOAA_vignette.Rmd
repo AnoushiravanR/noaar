@@ -20,7 +20,7 @@ The `noaar` package has been built for cleaning and mapping NOAA's Significant E
 
 ## Installation
 
-In order to install the `noaar` package, the user must first install the
+In order to install the `noaar` package, you must first install the
 `devtools` package and then use the following commands:
 
 ```{r eval=FALSE}
