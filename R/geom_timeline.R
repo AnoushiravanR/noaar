@@ -1,7 +1,7 @@
-#' Geom for creating a timeline from earthquake data
+#' @title Geom for creating a timeline from earthquake data
 #'
-#' This function creates a new geom to create a timeline for a specified
-#' data range and plots each earthquake as a point on that timline
+#' @description This function creates a new geom to create a timeline for a specified
+#'     data range and plots each earthquake as a point on that timline
 #'
 #' @param mapping Set of aesthetis mappings created by \code{\link[ggplot2]{aes}}.
 #' @param data The data to be displayed in this layer.
@@ -42,13 +42,11 @@ geom_timeline <- function(mapping = NULL, data = NULL, stat = "identity",
 
 
 
-#' @title
-#' ggproto timeline object of class ggproto
+#' @title ggproto timeline object of class ggproto
 #'
-#' @description
-#' This is the setup required for creating a new geom class. This GeomTimeLine
-#' inherits from a top level class called Geom.It creates a geom that draws the
-#' timeline for a specified date interval and put points on it for each earthquake.
+#' @description This is the setup required for creating a new geom class. This GeomTimeLine
+#'     inherits from a top level class called Geom.It creates a geom that draws the
+#'     timeline for a specified date interval and put points on it for each earthquake.
 #'
 #' @export
 GeomTimeLine <- ggplot2::ggproto("GeomTimeLine", ggplot2::Geom,

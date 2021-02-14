@@ -17,13 +17,13 @@ Returns a leaflet map.
 }
 \description{
 \code{eq_map} creates a leaflet map
-showing the location of each earthquakes on the map.
+    showing the location of each earthquakes on the map.
 }
 \details{
-The function maps the epicenters \code{Longitude} and \code{Latitude} and
-annotates each point with in popup window containing annotation data stored
-in a column of the data frame. The use can choose which column to be used
-for popup.
+The function maps the epicenters \code{Longitude} and
+ \code{Latitude} and annotates each point with in popup window containing
+ annotation data stored in a column of the data frame. The use can choose
+ which column to be used for popup.
 }
 \examples{
 \dontrun{

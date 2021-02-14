@@ -12,7 +12,7 @@ GeomTimeLine
 }
 \description{
 This is the setup required for creating a new geom class. This GeomTimeLine
-inherits from a top level class called Geom.It creates a geom that draws the
-timeline for a specified date interval and put points on it for each earthquake.
+    inherits from a top level class called Geom.It creates a geom that draws the
+    timeline for a specified date interval and put points on it for each earthquake.
 }
 \keyword{datasets}

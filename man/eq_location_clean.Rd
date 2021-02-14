@@ -16,12 +16,12 @@ a \code{tibble} with one additional column which is the result of the
 }
 \description{
 This function takes a NOAA earthquake data frame and do some data
-manipulation on \code{Locaiton Name}.
+    manipulation on \code{Locaiton Name}.
 }
 \details{
 \code{eq_location_clean} function manipulates the \code{Location Name} by
- separating country name and location name into \code{Country} and
- \code{Location} columns. It then turns \code{Location} into Title Case.
+    separating country name and location name into \code{Country} and
+    \code{Location} columns. It then turns \code{Location} into Title Case.
 }
 \examples{
 data(NOAA_data)

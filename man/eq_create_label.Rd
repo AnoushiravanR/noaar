@@ -15,7 +15,7 @@ A character vector using HTML tags to be used as label for
 }
 \description{
 \code{eq_create_label} creates a more informative popup using HTML tags
- to be used as labels in \code{\link{eq_map}}.
+    to be used as labels in \code{\link{eq_map}}.
 }
 \details{
 This function put together a character string for each earthquake to be

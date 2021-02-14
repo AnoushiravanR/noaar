@@ -41,7 +41,7 @@ combining with them.}
 }
 \description{
 \code{geom_timeline_label} enables you to label the n biggest earthquakes
-based on the Richter scales by means of \code{n_max} arguments.
+    based on the Richter scales by means of \code{n_max} arguments.
 }
 \examples{
 \dontrun{

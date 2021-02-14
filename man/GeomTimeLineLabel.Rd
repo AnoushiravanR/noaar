@@ -11,10 +11,10 @@ An object of class \code{GeomTimeLineLabel} (inherits from \code{Geom}, \code{gg
 GeomTimeLineLabel
 }
 \description{
-This is the setup required for creating a new geom class. This GeomTimeLineLabel
- inherits from a top level class called Geom. It creates a geom that draws the
- timeline for a specified date interval and put points on it for each earthquake.
- It then creates labels in order to annotate the biggest earthquakes on the
- timeline.
+This is the setup required for creating a new geom class.
+    This GeomTimeLineLabel inherits from a top level class called Geom.
+    It creates a geom that draws the timeline for a specified date interval
+    and put points on it for each earthquake. It then creates labels in
+    order to annotate the biggest earthquakes on the timeline.
 }
 \keyword{datasets}

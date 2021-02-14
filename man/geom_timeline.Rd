@@ -41,7 +41,7 @@ combining with them.}
 }
 \description{
 This function creates a new geom to create a timeline for a specified
-data range and plots each earthquake as a point on that timline
+    data range and plots each earthquake as a point on that timline
 }
 \examples{
 \dontrun{

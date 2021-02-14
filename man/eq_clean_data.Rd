@@ -11,16 +11,16 @@ eq_clean_data(data)
 }
 \value{
 A \code{tibble} with a new column \code{Date} but removing
-\code{Year}, \code{Mo} & \code{Dy} variables of the input data frame.
+    \code{Year}, \code{Mo} & \code{Dy} variables of the input data frame.
 }
 \description{
 \code{eq_clean_data} takes NOAA earthquake dataset and does some data
- manipulations on it.
+    manipulations on it.
 }
 \details{
 This function takes NOAA earthquake data and creates a \code{Date} column
- of type date by combining \code{Year}, \code{Mo} and \code{Dy}. It then
- makes sure that \code{Longitude} and \code{Latitude} are of type numeric.
+    of type date by combining \code{Year}, \code{Mo} and \code{Dy}. It then
+    makes sure that \code{Longitude} and \code{Latitude} are of type numeric.
 }
 \examples{
 data(NOAA_data)

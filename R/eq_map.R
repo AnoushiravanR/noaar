@@ -1,14 +1,12 @@
-#' Leaflet Map Tools
+#' @title Leaflet Map Tools
 #'
-#' @description
-#' \code{eq_map} creates a leaflet map
-#' showing the location of each earthquakes on the map.
+#' @description \code{eq_map} creates a leaflet map
+#'     showing the location of each earthquakes on the map.
 #'
-#' @details
-#' The function maps the epicenters \code{Longitude} and \code{Latitude} and
-#' annotates each point with in popup window containing annotation data stored
-#' in a column of the data frame. The use can choose which column to be used
-#' for popup.
+#' @details The function maps the epicenters \code{Longitude} and
+#'  \code{Latitude} and annotates each point with in popup window containing
+#'  annotation data stored in a column of the data frame. The use can choose
+#'  which column to be used for popup.
 #'
 #' @param data The \code{\link{NOAA_data}} data frame.
 #' @param annot_col The name of the column to be used for annotation and it
@@ -39,14 +37,12 @@ eq_map <- function(data, annot_col) {
 
 
 
-#' Leaflet Earth Quake Map with Customized Label
+#' @title Leaflet Earth Quake Map with Customized Label
 #'
-#' @description
-#' \code{eq_create_label} creates a more informative popup using HTML tags
-#'  to be used as labels in \code{\link{eq_map}}.
+#' @description \code{eq_create_label} creates a more informative popup using HTML tags
+#'     to be used as labels in \code{\link{eq_map}}.
 #'
-#' @details
-#' This function put together a character string for each earthquake to be
+#' @details This function put together a character string for each earthquake to be
 #' used as a more informative label. The label contains the following items:
 #' \itemize{
 #'  \item Location

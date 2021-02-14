@@ -21,7 +21,16 @@
 
 
 NOAA_data <- readr::read_delim("inst/extdata/earthquakes.tsv.txt",
-                        delim = "\t", col_names = TRUE, col_types = readr::cols(),
+                        delim = "\t", col_names = TRUE,
+                        col_types = readr::
+                          cols_only(Year = readr::col_double(),
+                                    Mo = readr::col_double(),
+                                    Dy = readr::col_double(),
+                                    `Location Name` = readr::col_character(),
+                                    Latitude = readr::col_double(),
+                                    Longitude = readr::col_double(),
+                                    Mag = readr::col_double(),
+                                    Deaths = readr::col_double()),
                         na = c("", "NA"))
 
 

@@ -1,7 +1,7 @@
-#' Label the Biggest Earthquakes on the Richter Scales
+#' @title Label the Biggest Earthquakes on the Richter Scales
 #'
-#' \code{geom_timeline_label} enables you to label the n biggest earthquakes
-#' based on the Richter scales by means of \code{n_max} arguments.
+#' @description \code{geom_timeline_label} enables you to label the n biggest earthquakes
+#'     based on the Richter scales by means of \code{n_max} arguments.
 #'
 #' @param mapping Set of aesthetis mappings created by \code{\link[ggplot2]{aes}}.
 #' @param data The data to be displayed in this layer.
@@ -55,14 +55,13 @@ geom_timeline_label <- function(mapping = NULL, data = NULL, stat = "identity",
 }
 
 
-#' GeomTimelineLabel
+#' @title GeomTimelineLabel
 #'
-#' @description
-#' This is the setup required for creating a new geom class. This GeomTimeLineLabel
-#'  inherits from a top level class called Geom. It creates a geom that draws the
-#'  timeline for a specified date interval and put points on it for each earthquake.
-#'  It then creates labels in order to annotate the biggest earthquakes on the
-#'  timeline.
+#' @description This is the setup required for creating a new geom class.
+#'     This GeomTimeLineLabel inherits from a top level class called Geom.
+#'     It creates a geom that draws the timeline for a specified date interval
+#'     and put points on it for each earthquake. It then creates labels in
+#'     order to annotate the biggest earthquakes on the timeline.
 #'
 #' @export
 GeomTimeLineLabel <- ggplot2::ggproto("GeomTimeLineLabel", ggplot2::Geom,
@@ -121,7 +120,6 @@ GeomTimeLineLabel <- ggplot2::ggproto("GeomTimeLineLabel", ggplot2::Geom,
                                grid::gTree(children = rlang::exec(grid::gList,  !!!params))
                              }
 )
-
 
 
 
