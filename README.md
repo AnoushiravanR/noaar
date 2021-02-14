@@ -5,8 +5,8 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/AnoushiravanR/noaar.svg?branch=main)](https://travis-ci.com/AnoushiravanR/noaar)
+[![Build
+Status](https://travis-ci.org/AnoushiravanR/noaar.svg?branch=main)](https://travis-ci.org/AnoushiravanR/noaar)
 <!-- badges: end -->
 
 The `noaar` package has been built for cleaning and mapping NOAA’s
